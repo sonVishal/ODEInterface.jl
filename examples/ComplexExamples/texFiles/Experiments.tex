@@ -93,7 +93,7 @@ We choose
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.70]{/home/vishal/GitRepo/ODEInterface.jl/myExamples/ImagesAndPDFs/Plots/RopePlot.png}
+\includegraphics[scale=0.70]{../ImagesAndPDFs/Plots/RopePlot.png}
 \caption{Movement of the rope with respect to time}
 \label{fig:rope}
 \end{figure}
@@ -167,7 +167,7 @@ The times $t_{out}$ will be the points at which the solution will be taken for c
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.30]{/home/vishal/GitRepo/ODEInterface.jl/myExamples/ImagesAndPDFs/Plots/vdpolPlot.png}
+\includegraphics[scale=0.30]{../ImagesAndPDFs/Plots/vdpolPlot.png}
 \caption{Solution of equation \eqref{vdpolEq} computed using SEULEX solver}
 \label{vdpolPlot}
 \end{figure}
@@ -193,7 +193,7 @@ one of the most prominent examples of the "stiff" literature. It was usually tre
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.60]{/home/vishal/GitRepo/ODEInterface.jl/myExamples/ImagesAndPDFs/Plots/RoberPlot.png}
+\includegraphics[scale=0.60]{../ImagesAndPDFs/Plots/RoberPlot.png}
 \caption{Solution of equation \eqref{roberEq} using SEULEX solver}
 \label{fig:roberPlot}
 \end{figure}
@@ -205,7 +205,7 @@ one of the most prominent examples of the "stiff" literature. It was usually tre
 \label{sec:codePerfStiff}
 
 The three available stiff solvers were applied to the above mentioned problems with $Tol = 10^{-2} , Tol = 10^{-2-1/4} , Tol = 10^{-2-2/4}, Tol = 10^{-2-3/4},\ldots$ up to $Tol = 10^{-10}$.\\ \\
-We set the relative error tolerance to be $RTol=Tol$ and the absolute error tolerance $ATol =10^{-6}\cdot Tol$ for the problem ROBER and $ATol = Tol$ for VDPOL. Then the numerical results were compared with a "reference solution" using the infinity norm (the norm is taken over all components and all output points). The "reference solution" is computed using $Tol=1.0\times 10^{-14}$, since reducing the tolerances any further results into an error.
+We set the relative error tolerance to be $RTol=Tol$ and the absolute error tolerance $ATol =10^{-6}\cdot Tol$ for the problem ROBER and $ATol = Tol$ for VDPOL. Then the numerical results were compared with a "reference solution" using the infinity norm (the norm is taken over all components and all output points). The "reference solution" is obtained from \url{http://www.unige.ch/~hairer/testset/testset.html}.
 
 \subsubsection{VDPOL}
 \begin{figure}[H]
@@ -298,6 +298,10 @@ https://github.com/JuliaLang/ODE.jl
 
 \bibitem{myODEInt}
 https://github.com/sonVishal/ODEInterface.jl/
+
+\bibitem{stiffRefSol}
+http://www.unige.ch/~hairer/testset/testset.html
+
 \end{thebibliography}
 
 % section  (end)

@@ -37,7 +37,8 @@ ATol = parse(BigFloat,"1e-26");
 # Solve and get the solution at T = tEnd
 (t,x_tmp) = ode23s(rober,x0,tSpan;
 reltol=RTol,abstol=ATol,points=:specified,
-jacobian = getJacobian,minstep=parse(BigFloat,"1e-8"));
+jacobian = getJacobian,
+minstep=parse(BigFloat,"1e-8"));
 
 x_ref = Array{BigFloat}(11,3);
 
