@@ -230,7 +230,7 @@ function bvpsolivp{FInt}(t::Vector{Float64},x::Vector{Float64},
   x[:]=ret_x
   kflag[1] = ret_code
   if haskey(ret_stats,"step_predict")
-    h[1] = ret_stats["step_predict"]
+    h[1] = ret_stats["step_predict"][1]
   else
     throw(OutputErrorODE(
       "IVP-solver had no field 'step_predict' in stats",cbi.odesol_julia))
