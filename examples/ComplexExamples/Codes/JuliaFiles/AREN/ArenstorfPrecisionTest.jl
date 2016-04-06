@@ -1,8 +1,7 @@
-
 # Check if all the packages are installed or not
 cond = "Gadfly" in keys(Pkg.installed()) &&
-    "Colors" in keys(Pkg.installed()) &&
-"Winston" in keys(Pkg.installed());
+        "Colors" in keys(Pkg.installed()) &&
+    	"ODEInterface" in keys(Pkg.installed());
 @assert cond "Please check if the following package(s) are installed:\
     Gadfly\
     Colors\
